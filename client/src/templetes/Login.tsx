@@ -1,10 +1,11 @@
 import { styled } from "styled-components"
 
-const Container = styled.div`
+const Container = styled.div` // Componente precisa iniciar com letra maiuscula | Componente de estilo
+    @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
     display: flex;
     height: 100vh;
+    font-family: 'Roboto', sans-serif;
     
-
     > * {
         flex-grow: 1
     }
@@ -47,36 +48,37 @@ const Container = styled.div`
                     padding: .5rem;
                     border: 0 none;
                     border-bottom: 1px solid black;
-                    outline: none;
+                    outline: none; // Tira a borda quando selecionado
                 }
-            }
-
-            button {
-                font-size: .8em;
-                background: #59429d;
-                border: 0;
-                border-radius: 5px;
-                margin-bottom: .3rem;
-                color: #ffffff;
-                padding: 0.2em 0.6em;
-                box-shadow: 2px 2px 2px rgba(0,0,0,0.2);
-                text-shadow: 1px 1px 1px rgba(0,0,0,0.5);
-                transform: translate(-3%, -3%);
-                cursor: pointer;
-                margin-right: 10px;
-            }
-
-            button:hover {
-                background: #afa1db;
-                box-shadow: inset 2px 2px 2px rgba(0,0,0,0.2);
-                text-shadow: none;
             }
         }
     }
 `
 
+const AccentButton = styled.button`
+    font-size: .8em;
+    background: #59429d;
+    border: 0;
+    border-radius: 5px;
+    margin-bottom: .3rem;
+    color: #ffffff;
+    padding: 0.2em 0.6em;
+    box-shadow: 2px 2px 2px rgba(0,0,0,0.2);
+    text-shadow: 1px 1px 1px rgba(0,0,0,0.5);
+    transform: translate(-3%, -3%);
+    cursor: pointer;
+    margin-right: 10px;
+
+    &:hover {
+        background: #afa1db;
+        box-shadow: inset 2px 2px 2px rgba(0,0,0,0.2);
+        text-shadow: none;
+    }
+
+` 
+
 export default () => <>
-    <Container>
+    <Container> 
         <div className="image">
             <img className="medusa" src="src/components/medusa.png" alt="Medusa" />
         </div>
@@ -90,8 +92,8 @@ export default () => <>
                     <label>Senha</label>
                     <input type="password" name="password" />
                 </div>
-                <button>Entrar</button>
-                <button>Recuperar Senha</button>
+                <AccentButton>Entrar</AccentButton>
+                <AccentButton>Recuperar Senha</AccentButton>
             </form>
         </div>
     </Container>
