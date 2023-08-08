@@ -32,7 +32,7 @@ const Container = styled.div` // Componente precisa iniciar com letra maiuscula 
         align-items: center;
 
         form {
-            font-size: 1.5rem;
+            font-size: 1rem;
             padding: 2rem;
             box-shadow: 0 0 7em rgb(113, 60, 156);
             border-radius: 30px 0;
@@ -53,23 +53,12 @@ const Container = styled.div` // Componente precisa iniciar com letra maiuscula 
                     outline: none; // Tira a borda quando selecionado
                 }
             }
-
-            .sign-up {
-                padding-top: .5rem;
-                font-size: .9rem;
-                color: #a4a4a4;
-
-                a {
-                    color: rgb(113, 60, 156);
-                    text-decoration: none;
-                }
-            }
         }
     }
 `
 
 const AccentButton = styled.button`
-    font-size: .8em;
+    font-size: 1em;
     background: #59429d;
     border: 0;
     border-radius: 5px;
@@ -98,6 +87,22 @@ export default () => <>
         <div className="container-login-form">
             <form>
                 <div>
+                    <label>Nome</label>
+                    <input name="nome" />
+                </div>
+                <div>
+                    <label>Idade</label>
+                    <input name="idade" />
+                </div>
+                <div>
+                    <label>Data de Nascimento</label>
+                    <input type="date" name="dtaNasc" />
+                </div>
+                <div>
+                    <label>E-Mail</label>
+                    <input type="email" name="email" />
+                </div>
+                <div>
                     <label>Login</label>
                     <input name="login" />
                 </div>
@@ -105,11 +110,8 @@ export default () => <>
                     <label>Senha</label>
                     <input type="password" name="password" />
                 </div>
-                <AccentButton>Entrar</AccentButton>
+                <Link to="/"><AccentButton>Enviar</AccentButton></Link>
                 <AccentButton>Recuperar Senha</AccentButton>
-                <div className="sign-up">
-                    é a sua primeira vez aqui, <Link to="/singnup">cadastre-se!</Link>
-                </div>
             </form>
         </div>
     </Container>
