@@ -92,7 +92,7 @@ export default () => <>
                 </div>
                 <div>
                     <label>Idade</label>
-                    <input name="idade" />
+                    <input type="number" name="idade" />
                 </div>
                 <div>
                     <label>Data de Nascimento</label>
