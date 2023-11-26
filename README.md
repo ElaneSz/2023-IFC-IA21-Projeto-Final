@@ -4,20 +4,15 @@
 
 ## Estrutara de Perrmissões
 
-- Coordenador
-  - Cadastrar Disciplina 
-  - Cadastrar Professores
-  - Casastrar Alunos
-
-- Disciplina/Matéria
-  - Vicular Professor X Aluno X Nota
-
-- Professor
-  - Cadastrar Notas
-
-- Alunos
-  - Vizualizar Notas
-
-## Chat ou Forum
-
+- Usuário | Logado
+  - Cadastrar Frases 
+  - Deletar Frases
+  - Alterar seus Dados
+  - Vizualizar Frases
+  - Copiar Frases
+  
+- Usuário | Não Logado
+  - Vizualizar Frases
+  - Copiar Frases
+  
 ...
