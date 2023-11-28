@@ -16,12 +16,12 @@ export function Private({ children }: PrivateProps): any {
             if (user) {
                 const userData = {
                     uid: user?.uid,
-                    email: user?.email
+                    email: user?.email,
                 }
                 localStorage.setItem("@reactLinks", JSON.stringify(userData))
                 setLoading(false);
                 setSigned(true);
-                return (user.uid)
+                //return (user.uid)
             } else {
                 setLoading(false);
                 setSigned(false);

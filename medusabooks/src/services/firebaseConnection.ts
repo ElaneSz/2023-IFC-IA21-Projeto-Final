@@ -4,12 +4,12 @@ import { getFirestore } from "firebase/firestore"
 import { getAuth } from "firebase/auth"
 
 const firebaseConfig = {
-  apiKey: "AIzaSyAedZ-zphoUh_jON2Ili6fF1drRxI3CUDc",
-  authDomain: "medusalinks-32f55.firebaseapp.com",
-  projectId: "medusalinks-32f55",
-  storageBucket: "medusalinks-32f55.appspot.com",
-  messagingSenderId: "282111985485",
-  appId: "1:282111985485:web:be63269cf01cf6c0cf1904"
+  apiKey: "AIzaSyBx7-Ki-mqLOKpLxyqF4SxZyCXeLLbLl3Q",
+  authDomain: "medusalinks-4b52b.firebaseapp.com",
+  projectId: "medusalinks-4b52b",
+  storageBucket: "medusalinks-4b52b.appspot.com",
+  messagingSenderId: "515585349693",
+  appId: "1:515585349693:web:fad36bdff105ec8af9b254"
 };
 
 const app = initializeApp(firebaseConfig);

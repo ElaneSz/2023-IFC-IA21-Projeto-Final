@@ -1,10 +1,11 @@
 import { Link } from 'react-router-dom';
-import { useState, FormEvent, useEffect } from 'react';
+import { useState, FormEvent, useEffect, Children } from 'react';
 import { Header } from '../../components/Header';
 import { Input } from '../../components/Input';
 import { db } from '../../services/firebaseConnection';
 import { doc, getDoc, updateDoc } from 'firebase/firestore';
 import Medusa from "../../../public/iconMedusa.png";
+import { child } from 'firebase/database';
 
 interface UserData {
   nome: string;
@@ -13,6 +14,7 @@ interface UserData {
   email: string;
   instituicao: string;
 }
+console.log(localStorage)
 
 export function UserProfile() {
   const [userData, setUserData] = useState<UserData>({
@@ -26,16 +28,14 @@ export function UserProfile() {
   useEffect(() => {
     function loadUserData() {
       // 'ID_DO_USUARIO' do usuário logado
-      const userId = 'OXCGP4VZSoC1xOvraMyX';
+      const userId = 'PLSlFmp1Aln8G3Ndq0Cb';
       const userDocRef = doc(db, 'usuarios', userId);
-
       getDoc(userDocRef).then((snapshot) => {
         if (snapshot.exists()) {
           setUserData(snapshot.data() as UserData);
         }
       });
     }
-
     loadUserData();
   }, []);
 
@@ -43,7 +43,7 @@ export function UserProfile() {
     e.preventDefault();
 
     // 'ID_DO_USUARIO' do usuário logado
-    const userId = 'OXCGP4VZSoC1xOvraMyX';
+    const userId = 'PLSlFmp1Aln8G3Ndq0Cb';
     const userDocRef = doc(db, 'usuarios', userId);
 
     updateDoc(userDocRef, {
